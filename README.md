@@ -14,7 +14,7 @@ npm install solmarrow
 
 ## Get an API key
 
-In SolMarrow go to **Settings → Apps and AI agents → API keys** and create a key (`smk_...`).
+In SolMarrow go to **Settings → API keys** and create a key (`smk_...`).
 Each key belongs to one workspace. Keep it in an environment variable, never in your code:
 
 ```bash

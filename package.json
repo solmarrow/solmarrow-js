@@ -1,1 +1,28 @@
-x
+{
+  "name": "solmarrow",
+  "version": "1.0.0",
+  "description": "Official JavaScript SDK for SolMarrow, the free social media scheduler: save drafts, schedule and publish posts to 20+ networks, upload media, read analytics and verify webhooks.",
+  "keywords": ["solmarrow", "social media", "social media scheduler", "schedule posts", "social media api", "instagram", "linkedin", "x", "tiktok", "ai agents", "sdk"],
+  "license": "MIT",
+  "homepage": "https://solmarrow.com/developers",
+  "bugs": { "url": "https://github.com/solmarrow/solmarrow-js/issues", "email": "support@solmarrow.com" },
+  "repository": { "type": "git", "url": "git+https://github.com/solmarrow/solmarrow-js.git" },
+  "author": { "name": "SolMarrow", "email": "support@solmarrow.com", "url": "https://solmarrow.com" },
+  "type": "commonjs",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": { "types": "./index.d.ts", "import": "./index.mjs", "require": "./index.js" },
+    "./package.json": "./package.json"
+  },
+  "files": ["index.js", "index.mjs", "index.d.ts", "README.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "sideEffects": false,
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

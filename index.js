@@ -4,7 +4,7 @@
 const crypto = require("node:crypto");
 
 const DEFAULT_BASE_URL = "https://app.solmarrow.com/api/v1";
-const VERSION = "1.0.0";
+const VERSION = "1.0.1";
 
 class SolMarrowError extends Error {
   /**
@@ -53,7 +53,7 @@ class SolMarrow {
   constructor(options = {}) {
     const env = typeof process !== "undefined" && process.env ? process.env : {};
     const token = String(options.apiKey || options.accessToken || env.SOLMARROW_API_KEY || "").trim();
-    if (!token) throw new TypeError("Pass apiKey (smk_...) or set SOLMARROW_API_KEY. Create a key in SolMarrow: Settings > Apps and AI agents > API keys.");
+    if (!token) throw new TypeError("Pass apiKey (smk_...) or set SOLMARROW_API_KEY. Create a key in SolMarrow: Settings > API keys.");
     const f = options.fetch || (typeof fetch === "function" ? fetch : null);
     if (!f) throw new TypeError("No fetch found. Use Node 18 or newer, or pass options.fetch.");
     Object.defineProperty(this, "_token", { value: token, enumerable: false });
